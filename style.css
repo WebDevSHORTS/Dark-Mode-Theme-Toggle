@@ -1,0 +1,65 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+#switch {
+    visibility: hidden;
+    position: absolute;
+}
+
+.switch-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.5s all ease;
+}
+
+.switch-label .toggle {
+    width: 25px;
+    height: 25px;
+    border-radius: 25px;
+    background-color: #eb008c;
+    position: absolute;
+    left: 3px;
+    transition: .5s all ease;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s all ease;
+    width: 100%;
+    height: 100vh;
+}
+
+#switch:checked ~ .switch-label {
+    background: #eb008c;
+    border: none;
+    transition: .5s all ease;
+}
+
+#switch:checked ~ .switch-label .toggle {
+    height: 12.5px;
+    border-radius: 25px 25px 0 0;
+    background: transparent;
+    box-shadow: 0 -6px 0 0 #fff;
+    transform: scale(0.9) translateX(75px) rotate(90deg);
+    transition: .7s all ease;
+}
+
+.dark {
+    background: #000;
+    transition: 1s all ease;
+}
